@@ -18,12 +18,48 @@ let students = ["Adarsh Mishra","Alok Dubey","Aryan","Abu tailib","Aditya","Anur
 
 
 //game functions
+let left = document.getElementById("left");
+let right = document.getElementById("right");
+let up = document.getElementById("up");
+let down = document.getElementById("down");
+
+//game functions
 function main(ctime){
     window.requestAnimationFrame(main);
     if((ctime-lastPaintTime)/1000<1/speed){return;}
     lastPaintTime=ctime;
     gameEngine();
 }
+
+
+
+up.addEventListener("click", () => {
+  if (inputDir.y !== 1) {
+    inputDir = { x: 0, y: -1 };
+    moveSound.play();
+  }
+});
+
+down.addEventListener("click", () => {
+  if (inputDir.y !== -1) {
+    inputDir = { x: 0, y: 1 };
+    moveSound.play();
+  }
+});
+
+left.addEventListener("click", () => {
+  if (inputDir.x !== 1) {
+    inputDir = { x: -1, y: 0 };
+    moveSound.play();
+  }
+});
+
+right.addEventListener("click", () => {
+  if (inputDir.x !== -1) {
+    inputDir = { x: 1, y: 0 };
+    moveSound.play();
+  }
+});
 function isCollide(snake) {
       //if you bump in yourself
       for (let i = 1; i < snake.length; i++) {
