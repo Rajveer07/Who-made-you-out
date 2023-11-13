@@ -100,3 +100,47 @@
 
   }
 
+#control{
+    position: absolute;
+    top: 520px;
+    display: flex;
+    flex-direction: column;
+}
+#left{
+    width: 35px;
+    height: 35px;
+    margin: 1px;
+    background-color: aliceblue;
+    text-align: center;
+    
+}
+#right{
+    width: 35px;
+    height: 35px;
+    margin: 1px;
+    background-color: aliceblue; 
+    text-align: center;
+}
+#up{
+    width: 35px;
+    height: 35px;
+    margin: 1px; 
+    background-color: aliceblue;
+    text-align: center;
+}
+#down{
+    width: 35px;
+    height: 35px;
+    margin: 1px;
+    background-color: aliceblue; 
+    text-align: center;
+}
+
+#left-right{
+display: flex;
+flex-direction: row;
+position: relative;
+left: -38px;
+gap: 34px;
+}
+
